@@ -1,0 +1,22 @@
+package tuitionfeecalculator;
+ 
+/**
+*ST10445079
+* @author Kwinana
+*/
+public class TuitionFeeCalculator {
+    public static void main(String[] args) {
+        // Initial tuition fee in 2016
+        double initialFee = 25000;
+        // The annual increase rate
+        double annualIncreaseRate = 1.07; // 7% increase
+ 
+        System.out.println("Year\tTuition Fee");
+ 
+        // Calculate and display the tuition fee for each year
+        for (int year = 2016; year <= 2021; year++) {
+            double fee = initialFee * Math.pow(annualIncreaseRate, year - 2016);
+            System.out.printf("%d\t%.2f%n", year, fee);
+        }
+    }
+}
